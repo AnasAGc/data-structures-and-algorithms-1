@@ -2,6 +2,9 @@
 Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the value of the search key, or -1 if the element is not in the array.
 
 ## Whiteboard Process
+
+![d](class03.png)
+
 1. Problem Domain:
 
 > define a function that takes two arguments, one is an array and one is a value, then, search if the value exists in the array using the Binary search without using any built-in methods
