@@ -40,7 +40,7 @@ def test_insert():
     assert ll.head.value is 17
     assert ll.head.next.value is 's'
 
-# testing the insclude, first for an empty linkedlist, then for one that only has one element, at last, for 
+# testing the include method, first for an empty linkedlist, then for one that only has one element, at last, for 
 # one that has multiple Nodes
 
 def test_include():
