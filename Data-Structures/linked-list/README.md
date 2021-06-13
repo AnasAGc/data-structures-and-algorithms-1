@@ -41,3 +41,15 @@ for the testing part, i tried to cover as much possibilities as possible, the te
 3. includes : Big o is O(n) for now, but it's going to be O(1) in the future 
 
 4. str: Big O is O(n), we are looping over the linked list
+
+# API
+
+this project has several functionalities, including:
+
+1. insert method is for when the user wants to insert a value at the beginning of the Linked list.
+
+2. the append is for if the user wants to insert a value at the end of the Linked list.
+
+3. the str method prints a string containing all the elements inside the linked list in an organized matter.
+
+4. include method checks if the value is in the linked list or not
