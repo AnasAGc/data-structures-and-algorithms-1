@@ -63,7 +63,38 @@ class LinkedList:
                     return True
             return inc
 
+    def insertBefore(self,value, newVal):
+        try:
+            node = Node(newVal)
+            current = self.head
+            if(current.value == value):
+                LinkedList.insert(self,newVal)
+                return
+            while(current.next.value != value):
+                current = current.next
+            a = current.next
+            current.next=node
+            node.next = a
+        except TypeError:
+            return f'please enter a proper type'
+        except:
+            return f"the value {value} does not exist in this instance"
     
+    def insertAfter(self,value, newVal):
+        try:
+            node = Node(newVal)
+            current = self.head
+            while(True):
+                if(current.value == value):
+                    a = current.next
+                    current.next = node
+                    node.next = a
+                    break
+                current = current.next
+        except:
+            return f"the value {value} does not exist in this instance"
+
+
     def __str__(self):
         out = ''
         # "{ a } -> { b } -> { c } -> NULL"
@@ -86,7 +117,6 @@ class LinkedList:
 if __name__ == "__main__":
     # Instances of Node
     # n1 = Node(34)
-    # n2 = Node('Suhaib')
     # n3 = Node(True)
     # print(n2.value)
 
@@ -94,18 +124,15 @@ if __name__ == "__main__":
     ll = LinkedList()
     # Value of first node on head
     # ll.append(4)
-    # ll.insert(5)
+    # ll.insert('s')
     # ll.append(-1)
     # ll.append(7)
     # print(ll.head.value)
-    print(ll.include(7))
+    # ll.insertBefore(1,1)
+    # ll.insertAfter(-1,1)
+    # ll.insertAfter(17,5)
     # print(ll.head.value)
     # print(str(ll))
     # print(ll.head.value)
     # print(ll.head.next)
     # print(str(ll))
-
-    # next of head (next of Node(4)) is Null
-    # I have ll: head - Node(4) -> Node(-1) -> Node('s') -> None
-    # print(ll.head.next.value)
-    # print(ll.head.next.next.value)
