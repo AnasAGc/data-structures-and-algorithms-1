@@ -68,7 +68,7 @@ class LinkedList:
             node = Node(newVal)
             current = self.head
             if(current.value == value):
-                LinkedList.insert(self,newVal)
+                self.insert(newVal)
                 return
             while(current.next.value != value):
                 current = current.next
