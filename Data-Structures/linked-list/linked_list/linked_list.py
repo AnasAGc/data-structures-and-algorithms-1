@@ -94,6 +94,20 @@ class LinkedList:
         except:
             return f"the value {value} does not exist in this instance"
 
+    def kthFromEnd (self,value):
+        try:
+            current = self.head
+            allValues = []
+            while(current.next != None):
+                allValues.append(current.value)
+                current = current.next
+            else:
+                allValues.append(current.value)
+            allValues.reverse()
+            return allValues[value]
+        except:
+            return 'this instance is not long enough'
+
 
     def __str__(self):
         out = ''
@@ -133,6 +147,7 @@ if __name__ == "__main__":
     # ll.insertAfter(17,5)
     # print(ll.head.value)
     # print(str(ll))
+    # print(ll.kthFromEnd(-1))
     # print(ll.head.value)
     # print(ll.head.next)
     # print(str(ll))
