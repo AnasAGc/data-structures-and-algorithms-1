@@ -4,7 +4,7 @@
 
 ## Whiteboard Process
 
-![wb1](resources/cc6.png)
+![wb1](resources/cc7.png)
 
 # Linked list
 

@@ -8,3 +8,5 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 2** |[Day 2](day2/README.md) |
 | **Day 3** |[Day 3](day3/README.md) |
 | **Day 5** |[Day 5](Data-Structures/linked-list/README.md) |
+| **Day 6** |[Day 6](Data-Structures/linked-list/README.md) |
+| **Day 5** |[Day 7](Data-Structures/linked-list/README7.md) |
