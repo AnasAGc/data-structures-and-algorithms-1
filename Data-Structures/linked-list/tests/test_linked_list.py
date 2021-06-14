@@ -74,3 +74,48 @@ def test_str():
     ll.insert(3)
     ll.append(2)
     assert str(ll) == '{ 3 } -> { 5 } -> { 5 } -> { 4 } -> { 2 } -> None'
+
+# testing the insertAfter method, to check how the method react for empty Linked lists, ones that are normal,
+# and ones that don't have the value
+
+def test_insertAfter():
+    ll = LinkedList()
+    assert ll.insertAfter(5,1) == "the value 5 does not exist in this instance"
+    ll.append(5)
+    ll.insertAfter(5,1)
+    assert ll.head.next.value == 1
+    assert ll.head.next.next == None
+    ll.insertBefore(1,4)
+    assert ll.head.next.value == 4
+    assert ll.head.next.next.value == 1
+
+# testing the insertBefore, to check how the method react for empty Linked lists, ones that are normal,
+# and ones that don't have the value
+
+def test_insertBefore():
+    ll = LinkedList()
+    assert ll.insertBefore(5,1) == "the value 5 does not exist in this instance"
+    ll.append(5)
+    ll.insertBefore(5,1)
+    assert ll.head.value is 1
+    assert ll.head.next.value is 5
+    ll.insertBefore(5,2)
+    assert ll.head.next.value is 2
+    assert ll.head.next.next.value is 5
+
+# testing the insertBefore, to check how the method react for empty Linked lists, ones that are normal,
+# and ones that don't have the value
+
+def test_kthFromEnd():
+    ll = LinkedList()
+    assert ll.kthFromEnd(1) == 'this instance is not long enough'
+    ll.append(5)
+    assert ll.kthFromEnd(1) == 'this instance is not long enough'
+    ll.kthFromEnd(0) == 5
+    ll.append(17)
+    ll.insert('foo')
+    ll.append(61)
+    assert ll.kthFromEnd(2) == 5
+    assert ll.kthFromEnd(3) == 'foo'
+    assert ll.kthFromEnd(6) == 'this instance is not long enough'
+    assert ll.kthFromEnd(-1) == 'foo'

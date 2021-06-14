@@ -2,6 +2,10 @@
 
 [code Link](linked_list/linked_list.py)
 
+## Whiteboard Process
+
+![wb1](resources/cc7.png)
+
 # Linked list
 
 Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.
@@ -16,7 +20,7 @@ Like arrays, Linked List is a linear data structure. Unlike arrays, linked list 
 
 ## Build
 
-we have four methods for now, insert, append, include and str, the insert method is for when the user wants to insert a value at the beginning of the Linked list, the append is for if the user wants to insert a value at the end of the Linked list, the str prints a string containing all the elements inside the linked list in an organized matter, and the include checks if the value is in the linked list or not
+we have six methods for now, insert, append, include and str, the insert method is for when the user wants to insert a value at the beginning of the Linked list, the append is for if the user wants to insert a value at the end of the Linked list, the str prints a string containing all the elements inside the linked list in an organized matter, and the include checks if the value is in the linked list or not, insertBefore is to insert a new node before a certain existing node the insertAfter to insert a new node after a certain existing node, and kthFromEnd is to check the nodes values from the end.
 
 ## Testing
 
@@ -32,6 +36,12 @@ for the testing part, i tried to cover as much possibilities as possible, the te
 
 5. testing the str method: which should return a string of the values in the Linked list, edge case is for an empty Linked list
 
+6. testing the insertAfter method: to check how the method react for empty Linked lists, ones that are normal and ones that don't have the value
+
+7. testing the insertBefore: to check how the method react for empty Linked lists, ones that are normal, and ones that don't have the value
+
+8. testing the kthFromEnd: to check how the method react for empty Linked lists, ones that are normal, and ones that don't have the value
+
 ## Big O, time complexity
 
 1. append: Big O is O(n), because we have to loop over the entire linked list in order to append a value
@@ -41,6 +51,12 @@ for the testing part, i tried to cover as much possibilities as possible, the te
 3. includes : Big o is O(n) for now, but it's going to be O(1) in the future 
 
 4. str: Big O is O(n), we are looping over the linked list
+
+5. insertAfter : it's Big O(n), we are looping over the instance
+
+6. insertBefore : it's Big O(n), we are looping over the instance
+
+7. kthFromEnd :  it's Big O(n), we are looping over the entire instance
 
 # API
 
@@ -53,3 +69,9 @@ this project has several functionalities, including:
 3. the str method prints a string containing all the elements inside the linked list in an organized matter.
 
 4. include method checks if the value is in the linked list or not
+
+5. insertAfter method to insert a value after a certain node, if exists
+
+6. insertBefore method to insert a value before a certain node, if exists
+
+7. kthFromEnd method is to look up for a node value, starting from the end
