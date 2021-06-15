@@ -10,3 +10,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 5** |[Day 5](Data-Structures/linked-list/README.md) |
 | **Day 6** |[Day 6](Data-Structures/linked-list/README.md) |
 | **Day 7** |[Day 7](Data-Structures/linked-list/README7.md) |
+| **Day 8** |[Day 8](Data-Structures/linked-list/ll_zip.md) |
