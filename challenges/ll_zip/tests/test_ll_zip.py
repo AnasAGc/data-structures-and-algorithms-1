@@ -1,5 +1,9 @@
-from linked_list.linked_list import LinkedList
+from ll_zip import __version__
+from ll_zip.ll_zip import LinkedList
 from ll_zip.ll_zip import zipLists as zip
+
+def test_version():
+    assert __version__ == '0.1.0'
 
 # we need to test today's function against one empty LL, two empty LL,
 # LL that only have one node, LLs that differ in length, both ways
