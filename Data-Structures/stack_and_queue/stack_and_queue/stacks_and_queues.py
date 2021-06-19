@@ -40,7 +40,7 @@ class Queue:
         node = Node(value)
         if not self.rear:
             self.front = node
-            self.rear = Node
+            self.rear = node
         else:
             self.rear.next = node
             self.rear = node
@@ -68,10 +68,10 @@ if __name__ == '__main__':
     # stack.push('d')
     # print(stack.peek())
     q = Queue()
-    # q.enqueue(1)
-    # q.enqueue(2)
-    # q.enqueue(3)
-    print(q.is_empty())
+    q.enqueue(1)
+    q.enqueue(2)
+    q.enqueue(3)
+    print(q.dequeue())
     # print(q.rear.value) //3
     # print(q.dequeue())
     

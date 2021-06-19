@@ -1,5 +1,5 @@
 from stack_and_queue import __version__
-from stack_and_queue.stacks_and_queues import Node, Stack, Queue
+from stack_and_queue.stacks_and_queues import  Stack, Queue
 import pytest
 
 def test_version():
@@ -14,6 +14,10 @@ def test_pop(stack_3_vals):
 
     assert stack_3_vals.pop() == 'd'
     assert stack_3_vals.top.value == -7
+    assert stack_3_vals.pop() == -7
+    assert stack_3_vals.pop() == 3
+    # now we reach the empty stack
+    assert stack_3_vals.pop() == 'this is an empty Stack'
 
     # for Empty stack, we expect an exception
     
@@ -36,20 +40,50 @@ def test_is_empty(stack_3_vals):
 
 
 
-# def test_enqueue(queue_vals):
-#     assert queue_vals.rear.value == 6
-#     assert queue_vals.front.value == 8
+def test_enqueue(queue_vals):
 
-# def test_dequeue(queue_vals):
-#     data = queue_vals.dequeue()
-#     assert data == 8
-#     assert queue_vals.front.value == 'hi'
+    # no nodes
+    q = Queue()
+    assert q.front == None
+    assert q.rear == None
 
-# def test_peek(queue_vals):
-#     pass
+    # only one node
+    q.enqueue(5)
+    assert q.front.value == 5
+    assert q.rear.value == 5
 
-# def test_is_empty(queue_vals):
-#     pass
+    # two nodes
+    q.enqueue(7)
+    assert q.front.value == 5
+    assert q.rear.value == 7
+
+    assert queue_vals.rear.value == 6
+    assert queue_vals.front.value == 8
+
+def test_dequeue(queue_vals):
+    data = queue_vals.dequeue()
+    assert data.value == 8
+    assert data.next == None
+    assert queue_vals.front.value == 'hi'
+    queue_vals.dequeue()
+    queue_vals.dequeue()
+    assert queue_vals.front.value == 6
+    queue_vals.dequeue()
+    # empty Queue
+    empty = queue_vals.dequeue()
+    assert empty == 'this is an empty Stack'
+    
+
+    
+def test_peek(queue_vals):
+    q = Queue()
+    assert q.peek() == 'this is an empty Stack'
+    assert queue_vals.peek() == 8
+
+def test_is_empty(queue_vals):
+    q = Queue()
+    assert q.is_empty() == True
+    assert queue_vals.is_empty() == False
 
 
 # Decorator
