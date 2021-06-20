@@ -54,3 +54,11 @@ this solution is based on using the pop and push methods, for the second solutio
 ```
 
 they are both the same when it comes to functionality.
+
+## Testing
+
+for the testing, the methods were tested based on the following
+
+* enqueue : this method was tested against no values, inserting one, two and multiple values
+
+* dequeue : this method was tested for Queue with multiple values, Queue with one value and a Queue with no values at all
