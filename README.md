@@ -13,3 +13,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 8** |[Day 8](challenges/ll_zip/ll_zip.md) |
 | **Day 10** |[Day 10](Data-Structures/stack_and_queue/README.md) |
 | **Day 11** |[Day 11](challenges/queue_with_stacks/README.md) |
+| **Day 12** |[Day 12](challenges/fifo_animal_shelter/README.md) |
