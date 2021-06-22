@@ -30,13 +30,15 @@ for the enqueue method, i used this simple code that checks if the input is 'cat
 then i used a code for the dequeue method, first i checked if the Queue is empty or not, then checked if the prep is 'dog' or 'cat' or something else, then i dequeue the value if exists
 
 ```
-        if not self.rear or not self.front:
+        if not self.rear:
             return None
         if (pref != 'dog' and pref != 'cat'):
             return None
         temp = self.front
         if temp.value == pref:
             a = self.dequeue().value
+            if not self.front:
+                self.rear = None
             return a
         else:
             while temp.next != None:
