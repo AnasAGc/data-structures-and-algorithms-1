@@ -21,7 +21,8 @@ def test_Animal_enqueue():
     assert animals.rear.value == 'dog'
 
 # testing Animal_dequeue method against empty instance, values that aren't 'cat' or 'dog', or when there is no
-# more "dog" and "cat"
+# more "dog" and "cat", after the shelter is empty, i tested the enqueue and dequeue again, just to make sure
+# everything is working properly
 
 def test_Animal_enqueue():
     animals = AnimalShelter()
@@ -37,3 +38,8 @@ def test_Animal_enqueue():
     assert animals.Animal_dequeue('dog') == 'dog'
     assert animals.Animal_dequeue('dog') == 'dog'
     assert animals.Animal_dequeue('dog') == None
+    animals.Animal_enqueue('cat')
+    animals.Animal_enqueue('dog')
+    assert animals.Animal_dequeue('cat') == 'cat'
+    assert animals.Animal_dequeue('cat') == None
+    assert animals.Animal_dequeue('dog') == 'dog'

@@ -51,13 +51,15 @@ class AnimalShelter(Queue):
 # this algorithm is built with a hint from google, not entirely by myself, which is the idea  of previous (i needed to create a 
 # previous by myself, but previous isn't available in Queues, so, the temp.next worked)
     def Animal_dequeue(self , pref):
-        if not self.rear or not self.front:
+        if not self.rear:
             return None
         if (pref != 'dog' and pref != 'cat'):
             return None
         temp = self.front
         if temp.value == pref:
             a = self.dequeue().value
+            if not self.front:
+                self.rear = None
             return a
         else:
             while temp.next != None:
@@ -83,4 +85,12 @@ if __name__ == "__main__":
     print(animals.Animal_dequeue("cat"))
     print(animals.Animal_dequeue("dog"))
     print(animals.Animal_dequeue("dog"))
+    print(animals.Animal_dequeue("dog"))
+    print(animals.Animal_dequeue("dog"))
+    print(5555555555555555555)
+    animals.Animal_enqueue('dog')
+    animals.Animal_enqueue('cat')
+    print(animals.Animal_dequeue("cat"))
+    print(animals.Animal_dequeue("dog"))
+    print(animals.Animal_dequeue("cat"))
     print(animals.Animal_dequeue("dog"))
