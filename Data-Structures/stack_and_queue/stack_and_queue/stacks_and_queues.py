@@ -10,9 +10,6 @@ class Stack:
         node = Node(value)
         node.next = self.top
         self.top = node
-        # node = Node(value)
-        # node.next = self.top
-        # self.top=node
 
     def pop(self):
         try:
@@ -59,7 +56,7 @@ class Queue:
         except:
             return 'this is an empty Stack'
     def is_empty(self):
-        return self.front == None
+        return self.front == Nonez
 
 if __name__ == '__main__':
     # stack = Stack()
