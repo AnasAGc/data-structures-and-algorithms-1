@@ -9,6 +9,11 @@ A tree whose elements have at most two children is called a binary tree. Each el
 
 ![d](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/images/BST2.PNG)
 
+## Code link
+
+[Trees code](trees/trees.py)
+
+
 ## Challenge
 
 * Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
