@@ -40,7 +40,7 @@ def test_Binary_Search_Tree(binery):
     assert binery.Contains(5) is False
 
 
-
+# all the provided tests cover the required ones inside 
 
 @pytest.fixture
 def prepared_tree():
