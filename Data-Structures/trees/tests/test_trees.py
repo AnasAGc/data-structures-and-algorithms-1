@@ -40,6 +40,15 @@ def test_Binary_Search_Tree(binery):
     assert binery.Contains(5) is False
 
 
+# testing max, for an empty Tree, a tree with one value and a tree with multiple values
+def test_max(max):
+    new_tree = Tree()
+    assert new_tree.max() is None
+    assert max.max() is 47
+    new_tree.root =  Node(5)
+    assert new_tree.max() is 5
+
+
 # all the provided tests cover the required ones inside 
 
 @pytest.fixture
@@ -65,6 +74,16 @@ def binery():
     newTree.add(8)
     return newTree
 
+@pytest.fixture
+def max():
+    tree = Tree()
+    tree.root = Node(10)
+    tree.root.left = Node(7)
+    tree.root.right = Node(13)
+    tree.root.left.left = Node(12)
+    tree.root.left.right = Node(47)
+    tree.root.right.left = Node(8)
+    return tree
 
 #                10
 #               /  \
