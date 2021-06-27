@@ -61,6 +61,29 @@ class Tree:
             return output
         except:
             return 'an error occurred during post-order method'
+    
+    def max(self):
+        try:
+            output = float('-inf')
+            if not self.root:
+                return None
+            def _traverse(node):
+                nonlocal output
+                if node.value > output:
+                    output = node.value
+                if node.left:
+                    _traverse(node.left)
+                if node.right:
+                    _traverse(node.right)
+                return output
+            _traverse(self.root)
+            return output
+        except:
+            return 'an error occurred during finding the maximum value'
+
+
+
+
 
 class Binary_Search_Tree(Tree):
     
@@ -112,9 +135,13 @@ class Binary_Search_Tree(Tree):
 
 if __name__ == "__main__":
     tree = Binary_Search_Tree()
-    tree.add(5)
-    tree.add(15)
-    tree.add(7)
-    print(tree.Contains(7))
+    # tree.add(5)
+    # tree.add(15)
+    # tree.add(4)
+    # tree.add(37)
+    # tree.add(1)
+    tree.add(2)
+    # print(tree.Contains(7))
+    print(tree.max())
 
 # done

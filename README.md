@@ -16,3 +16,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 12** |[Day 12](challenges/fifo_animal_shelter/README.md) |
 | **Day 13** |[Day 13](challenges/multi_bracket_validation/README.md) |
 | **Day 15** |[Day 15](Data-Structures/trees/README.md) |
+| **Day 16** |[Day 16](Data-Structures/trees/README2.md) |
