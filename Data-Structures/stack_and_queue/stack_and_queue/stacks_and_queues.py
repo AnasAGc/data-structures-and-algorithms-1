@@ -56,7 +56,7 @@ class Queue:
         except:
             return 'this is an empty Stack'
     def is_empty(self):
-        return self.front == Nonez
+        return self.front == None
 
 if __name__ == '__main__':
     # stack = Stack()

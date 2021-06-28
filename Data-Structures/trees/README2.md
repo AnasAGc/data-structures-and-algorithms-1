@@ -1,6 +1,6 @@
 ## Code link
 
-[d](trees/trees.py)
+[Code](trees/trees.py)
 
 # Challenge Summary
 Find the Maximum Value in a Binary Tree, create a method that takes no inputs, and returns the maximum value inside the Binary Tree
