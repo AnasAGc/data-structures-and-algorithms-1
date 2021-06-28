@@ -81,6 +81,31 @@ class Tree:
         except:
             return 'an error occurred during finding the maximum value'
 
+    # instead of creating a Queue (i don't like it), used the images to come up with this idea, Queue acts like 
+    # a temporary storage and that's it, i can do this with just an array, it will check the left then the right
+    # for all the nodes, then go to the next level
+
+    def breadthFirst (self):    
+        output = []
+        temp_nodes = []
+        if not self.root:
+            return "this is an empty Tree"
+        temp_nodes.append(self.root)
+        output.append(self.root.value)
+        val = self.root
+        while val:
+            if val.left:
+                output.append(val.left.value)
+                temp_nodes.append(val.left)
+            if val.right:
+                output.append(val.right.value)
+                temp_nodes.append(val.right)
+            temp_nodes.pop(0)
+            if not len(temp_nodes):
+                break
+            val = temp_nodes[0]
+        return (output)
+
 
 
 
@@ -140,8 +165,8 @@ if __name__ == "__main__":
     # tree.add(4)
     # tree.add(37)
     # tree.add(1)
-    tree.add(2)
+    # tree.add(2)
     # print(tree.Contains(7))
-    print(tree.max())
+    print(tree.breadthFirst())
 
 # done
