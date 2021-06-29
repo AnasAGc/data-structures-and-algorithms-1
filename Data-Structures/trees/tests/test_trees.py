@@ -49,10 +49,6 @@ def test_max(max):
     assert new_tree.max() is 5
 
 
-def test_breadthFirst(prepared_tree):
-    new_tree = Tree()
-    assert new_tree.breadthFirst() == "this is an empty Tree"
-    assert prepared_tree.breadthFirst() == ['A','B','C','D','E','F']
 
 
 # all the provided tests cover the required ones inside 
