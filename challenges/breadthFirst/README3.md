@@ -6,7 +6,7 @@
 Write a function called breadth first, which iterates through the tree by going through each level of the tree node-by-node. So, given our starting tree one more time.
 
 ## Whiteboard Process
-![d](resources/cc17.png)
+![d](resources/cc17.jpg)
 
 ## Approach & Efficiency
 
