@@ -16,6 +16,7 @@ Step 2:
 Split the selected array (as evenly as possible)
 
 </br>
+
 ![image](resources/2.PNG)
 
 Step 3:
