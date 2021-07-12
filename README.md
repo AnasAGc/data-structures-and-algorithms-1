@@ -20,3 +20,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 17** |[Day 17](challenges/breadthFirst/README3.md) |
 | **Day 18** |[Day 18](challenges/tree-fizz-buzz/README.md) |
 | **Day 26** |[Day 26](challenges/insertion_sort/README.md) |
+| **Day 27** |[Day 27](challenges/merge_sort/README.md) |
