@@ -35,3 +35,10 @@ class LinkedList:
             values.append(current.data)
             current = current.next
         return values
+
+
+    # def get_all_data(self):
+    #     all = []
+    #     temp = self.head
+    #     while temp:
+    #         all.push()
