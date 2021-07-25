@@ -23,3 +23,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 27** |[Day 27](challenges/merge_sort/README.md) |
 | **Day 28** |[Day 28](challenges/quicksort/README.md) |
 | **Day 30** |[Day 30](Data-Structures/hashtable/README.md) |
+| **Day 31** |[Day 31](challenges/hashmap-repeated-words/README.md) |
