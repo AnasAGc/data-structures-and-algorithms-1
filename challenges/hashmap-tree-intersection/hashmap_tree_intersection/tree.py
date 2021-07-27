@@ -104,24 +104,6 @@ class Binary_Search_Tree(Tree):
                         return
                     assigns(node.left)
             assigns(self.root)
-        # try:
-        #     node = Node(value)
-        #     if not self.root:
-        #         self.root = node
-        #         return
-        #     a = self.root
-        #     while True:
-        #         if value >= a.value:
-        #             if not a.right:
-        #                 a.right = node
-        #                 return
-        #             a = a.right
-        #         else:
-        #             if not a.left:
-        #                 a.left = node
-        #                 return
-        #             a = a.left
-
         except:
             return 'an error occurred using adding method, please enter a valid non-duplicated input the next time'
     def Contains(self,value):
@@ -145,36 +127,5 @@ class Binary_Search_Tree(Tree):
 
             check(self.root)
             return bool
-            # bool = False
-            # if not self.root:
-            #     return bool
-            # def looping(root):
-            #     nonlocal bool
-            #     if root.value == value:
-            #         bool = True
-            #         return
-            #     elif value > root.value:
-            #         if root.right:
-            #             looping(root.right)
-            #         return
-            #     else:
-            #         if root.left:
-            #             looping(root.left)
-            #         return
-            # looping(self.root)
-            # return bool
         except:
             return 'an error occurred using Contains, please enter a valid input the next time'
-
-if __name__ == "__main__":
-    tree = Binary_Search_Tree()
-    # tree.add(5)
-    # tree.add(15)
-    # tree.add(4)
-    # tree.add(37)
-    # tree.add(1)
-    # tree.add(2)
-    # print(tree.Contains(7))
-    # print(tree.breadthFirst())
-
-# done
