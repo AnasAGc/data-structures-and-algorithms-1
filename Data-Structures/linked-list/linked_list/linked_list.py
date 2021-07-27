@@ -136,11 +136,14 @@ if __name__ == "__main__":
 
 
     ll = LinkedList()
+    ll.append(4)
+    ll.append(-1)
+    ll.append(7)
+    ll.insertBefore(-1,5)
+    print(str(ll))
+    
     # Value of first node on head
-    # ll.append(4)
     # ll.insert('s')
-    # ll.append(-1)
-    # ll.append(7)
     # print(ll.head.value)
     # ll.insertBefore(1,1)
     # ll.insertAfter(-1,1)
