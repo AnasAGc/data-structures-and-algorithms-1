@@ -26,3 +26,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 31** |[Day 31](challenges/hashmap-repeated-words/README.md) |
 | **Day 32** |[Day 32](challenges/hashmap-tree-intersection/README.md) |
 | **Day 33** |[Day 33](challenges/hashmap-left-join/README.md) |
+| **Day 35** |[Day 35](Data-Structures/graph/README.md) |
