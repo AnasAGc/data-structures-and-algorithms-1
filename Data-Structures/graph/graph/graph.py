@@ -20,7 +20,9 @@ class Graph:
         except:
             return 'either node 1 or node 2 does not exits'
     def get_nodes(self):
-        return list(self.adjacency_list.keys())
+        if len(self.adjacency_list.keys()):
+            return list(self.adjacency_list.keys())
+        return None
     def get_neighbors(self,node):
         return self.adjacency_list[node]
     def size(self):
