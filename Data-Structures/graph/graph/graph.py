@@ -25,6 +25,27 @@ class Graph:
         return self.adjacency_list[node]
     def size(self):
         return len(self.adjacency_list.keys())
+    def breadth_first(self,node):
+        try:
+            if not node in self.adjacency_list.keys():
+                raise Exception
+            all = []
+            breadth = []
+            all.append(node)
+            breadth.append(node)
+            while(len(all)):
+                edges = self.get_neighbors(node)
+                if len(edges):
+                    for edge in edges:
+                        if not (edge.node in all) and not (edge.node in breadth):
+                            all.append(edge.node)
+                breadth.append(all.pop(0))
+                if len(all):
+                    node = all[0]
+            breadth.pop(0)
+            return breadth
+        except:
+            return "this node is not one of this graph's vertexes"
 
 
 if __name__ == '__main__':
@@ -35,18 +56,24 @@ if __name__ == '__main__':
     d = graph.add_node('d')
     e = graph.add_node('e')
     f = graph.add_node('f')
+    g = graph.add_node('g')
+    h = graph.add_node('h')
+    i = graph.add_node('i')
+    k = graph.add_node('k')
+    graph.add_edge(a, b)
     graph.add_edge(a, c)
-    graph.add_edge(a, d)
-    graph.add_edge(b, c)
-    graph.add_edge(b, f)
-    graph.add_edge(c, a)
+    graph.add_edge(a,e)
+    graph.add_edge(b, d)
+    graph.add_edge(c, f)
     graph.add_edge(c, b)
-    graph.add_edge(c, e)
-    graph.add_edge(d, a)
-    graph.add_edge(d, e)
-    graph.add_edge(e, c)
-    graph.add_edge(e, d)
-    graph.add_edge(e, f)
-    graph.add_edge(f, b)
-    graph.add_edge(f, e)
-    print()
+    graph.add_edge(e,g)
+    graph.add_edge(f,h)
+    graph.add_edge(g,h)
+    graph.add_edge(f,i)
+    graph.add_edge(h,k)
+    graph.add_edge(i,k)
+    # print(graph.breadth_first(a)[0].value)
+    # print(graph.breadth_first(a)[1].value)
+    # print(graph.breadth_first(a)[2].value)
+    # print(graph.breadth_first(a)[3].value)
+    print(len(graph.breadth_first(a)))
