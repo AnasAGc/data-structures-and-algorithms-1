@@ -1,10 +1,14 @@
+## Code
+
+[Code](graph/graph.py)
+
 # Challenge Summary
 
 write a method for the Graph class called breadth first, that takes a Node as an argument, and returns the collection of nodes in the order they were visited.
 
 ## Whiteboard Process
 
-<!-- Embedded whiteboard image -->
+![image](resources/cc36.png)
 
 ## Approach & Efficiency
 
