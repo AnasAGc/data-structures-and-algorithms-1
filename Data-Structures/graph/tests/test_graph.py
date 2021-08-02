@@ -38,3 +38,6 @@ def test_graph():
     assert graph.get_neighbors(a)[1].node.value == 'd'
     # testing the size method
     assert graph.size()==6
+    # check for empty graph
+    graph2 = Graph()
+    assert graph2.get_nodes() == None 
