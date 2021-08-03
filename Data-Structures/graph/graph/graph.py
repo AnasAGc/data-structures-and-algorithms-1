@@ -48,6 +48,29 @@ class Graph:
             return breadth
         except:
             return "this node is not one of this graph's vertexes"
+    
+    def depth_first(self,node):
+        try:
+            output = []
+            visited = set()
+            def looping(node):
+                nonlocal output
+                output.append(node)
+                visited.add(node)
+                if self.adjacency_list[node]:
+                    for element in self.adjacency_list[node]:
+                        if not (element.node in visited):
+                            looping(element.node)
+            looping(node)
+            return output
+        except:
+            return 'an error occurred during depth_first method'
+    
+
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -80,3 +103,27 @@ if __name__ == '__main__':
     # print(graph.breadth_first(a)[2].value)
     # print(graph.breadth_first(a)[3].value)
     print(len(graph.breadth_first(e)))
+    graph2 = Graph()
+    A = graph2.add_node('A')
+    B = graph2.add_node('B')
+    C = graph2.add_node('C')
+    D = graph2.add_node('D')
+    E = graph2.add_node('E')
+    F = graph2.add_node('F')
+    G = graph2.add_node('G')
+    H = graph2.add_node('H')
+    graph2.add_edge(A,B)
+    graph2.add_edge(A,D)
+    graph2.add_edge(D,E)
+    graph2.add_edge(D,H)
+    graph2.add_edge(D,F)
+    graph2.add_edge(B,C)
+    graph2.add_edge(C,G)
+
+    out = graph2.depth_first(A)
+    for item in out:
+        print(item.value)
+
+
+
+
