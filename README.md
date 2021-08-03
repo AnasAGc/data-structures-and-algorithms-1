@@ -29,3 +29,4 @@ Welcome to the Data structure and algorithms, the following table is for all the
 | **Day 35** |[Day 35](Data-Structures/graph/README.md) |
 | **Day 36** |[Day 36](Data-Structures/graph/README2.md) |
 | **Day 37** |[Day 37](challenges/graph_business_trip/README.md) |
+| **Day 38** |[Day 38](Data-Structures/graph/README3.md) |
