@@ -78,3 +78,30 @@ def test_breadth_first():
     assert breadth[7].value == 'h'
     assert breadth[8].value == 'i'
     assert breadth[9].value == 'k'
+
+def test_depth_first():
+    graph = Graph()
+    A = graph.add_node('A')
+    B = graph.add_node('B')
+    C = graph.add_node('C')
+    D = graph.add_node('D')
+    E = graph.add_node('E')
+    F = graph.add_node('F')
+    G = graph.add_node('G')
+    H = graph.add_node('H')
+    graph.add_edge(A,B)
+    graph.add_edge(A,D)
+    graph.add_edge(D,E)
+    graph.add_edge(D,H)
+    graph.add_edge(D,F)
+    graph.add_edge(B,C)
+    graph.add_edge(C,G)
+    output = graph.depth_first(A)
+    assert output[0] == A
+    assert output[1] == B
+    assert output[2] == C
+    assert output[3] == G
+    assert output[4] == D
+    assert output[5] == E
+    assert output[6] == H
+    assert output[7] == F
